@@ -129,7 +129,7 @@ summary:focus-visible {
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(350px, 430px);
+  grid-template-columns: 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -806,6 +806,8 @@ summary:focus-visible {
 .detail-column,
 .mobile-drawer {
   padding: 22px;
+  max-width: 860px;
+  width: 100%;
 }
 
 .detail-panel-content {
@@ -942,17 +944,13 @@ summary:focus-visible {
   background: rgba(87, 66, 41, 0.16);
 }
 
+.mobile-drawer {
+  display: none !important;
+}
+
 @media (max-width: 1180px) {
   .workspace {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .detail-column {
-    display: none;
-  }
-
-  .mobile-drawer {
-    display: block;
+    grid-template-columns: 1fr;
   }
 }
 
